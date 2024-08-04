@@ -1,0 +1,84 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="WebApplication_For_Appointment_System.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        /* Add background image to the body element */
+        body {
+            /* background-image: url('image/black.jpg'); /* Replace 'path/to/your-image.jpg' with your actual image file path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Choose a suitable font */
+        }
+
+        /* Style the header and navigation links */
+        #header {
+            background-color: #333; /* Choose your header background color */
+            color: #fff; /* Choose your text color */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between; /* Align items horizontally at each end */
+        }
+
+        #nav {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #nav li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Style the content area */
+        #content {
+            padding: 20px;
+        }
+
+          /* Style the "Login" and "Register" links to match the other navigation links */
+        #loginregister a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* Add more CSS styles for your content as needed */
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="Default.aspx" class="login-link">Home</a></li>
+                <li><a href="HaircutPage.aspx" class="link">Haircut List</a></li>
+                <li><a href="About.aspx"class="link" >About Us</a></li>
+                <li><a href="Contact.aspx" class="link">Contact Us</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+            <div id="loginregister" runat="server">
+                <a href="Login.aspx" class="login-link">Login</a>
+                <a href="Register.aspx"class="register-link">Register</a>
+            </div>
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html> 
+
+
+
